@@ -1,0 +1,91 @@
+.delete-product-container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .delete-product-container h2,
+  .delete-product-container h3 {
+    text-align: center;
+  }
+  
+  .delete-product-container form,
+  .delete-product-container div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .delete-product-container label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .delete-product-container input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .delete-product-container button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0.5rem;
+  }
+  
+  .delete-product-container button:hover {
+    background-color: #c82333;
+  }
+  
+  .delete-product-container .confirmation-container {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .delete-product-container .confirmation-buttons {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .delete-product-container .confirmation-buttons button {
+    width: 48%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-product-container .confirmation-buttons button:first-child {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .delete-product-container .confirmation-buttons button:first-child:hover {
+    background-color: #c82333;
+  }
+  
+  .delete-product-container .confirmation-buttons button:last-child {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .delete-product-container .confirmation-buttons button:last-child:hover {
+    background-color: #5a6268;
+  }
+  
+  .delete-product-container .error {
+    color: red;
+    text-align: center;
+  }
+  

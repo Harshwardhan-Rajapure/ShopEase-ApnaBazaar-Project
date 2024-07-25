@@ -1,0 +1,80 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+                <img style="width: 62px; margin-top: 4px;" src="../../assets/jewelery.png" alt="">
+                <h6>Jewelery</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('books')">
+                <img src="https://static.vecteezy.com/system/resources/previews/009/377/766/non_2x/3d-book-icon-with-transparent-background-free-png.png" alt="">
+                <h6>Books</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('beauty')">
+                <img src="../../assets/beauty.png" alt="">
+                <h6>Beauty</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('grocery')">
+                <img src="../../assets/grocery.png" alt="">
+                <h6>Grocery</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('home/kitchen')">
+                <img src="../../assets/homekitchen.png" alt="">
+                <h6>Home & Kitchen</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('sports')">
+                <img style="width: 55px; margin-top: 8px;" src="../../assets/sports.png" alt="">
+                <h6>Sports</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('furniture')">
+                <img src="../../assets/furniture.png" alt="">
+                <h6>Furniture</h6>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- <app-carousel></app-carousel> -->
+<!-- <app-carousel></app-carousel> -->
+<div class="container-fluid abc">
+    <div class="row xyz" >
+        <ng-container *ngFor="let item of filterCategory">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="Can't load from DB">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> {{item.price | currency:'INR'}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

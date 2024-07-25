@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    /* max-width: 100%; */
+    // background: #39d4df;
+}
+
+// header {
+//     display: flex;
+//     justify-content: center;
+//     align-items: flex-start;
+// }
+
+.login-container {
+    position: absolute;
+    top: 120px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    margin-right: 20%;
+}
+
+.search-input {
+    padding-left: 2em; /* Adjust padding to make space for the icon */
+    background-color: #e0f7fa !important;    border: 1px solid #ccc; /* Optional: Change the border color */
+    border-radius: 4px; /* Optional: Add border radius for rounded corners */
+    height: 2.5em; /* Optional: Adjust the height */
+    width: 25em;
+    font-size: 1em; /* Optional: Adjust the font size */
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 1.5em; /* Adjust this value to position the icon correctly */
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent the icon from blocking input clicks */
+    color: #aaa; /* Optional: Change the icon color */
+    font-size: 1.3em; /* Increase the icon size */
+}
+
+
+.maintitle2 {
+    font-family: 'Great Vibes', cursive; 
+    font-size: 40px; 
+    color: #333; 
+    margin-bottom: 10px;
+    background-color: transparent; 
+}
+
+.maintitle1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: transparent; 
+}
+
+.commerce{
+    // margin-left: 10px;
+    background-color: transparent;
+}
+
+.search-input {
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 20px;
+    padding: 8px 36px;
+    border-radius: 8px;
+    transition: all 0.3 ease-in-out;
+    background-color: transparent;
+}
+
+.search-input:hover{
+    color: #000; 
+    /* background-image: linear-gradient(120deg, #f39c12, #e74c3c);  */
+    /* box-shadow: 2px 4px 8px #000;  */
+}
+
+.navbar{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    background: #fff;
+    /* margin-right: 15%; */
+}
+
+.navbar:hover{
+    background: #d7eaf2;
+}
+
+.nav-link{
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0px 20px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3 ease-in-out;
+    background-color: transparent;
+    flex-shrink: 0;
+
+}
+
+.nav-link:hover {
+    color: red;
+    // background-image: linear-gradient(120deg, #f39c12, #e74c3c); 
+    box-shadow: 2px 4px 8px #000; 
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.icons{
+    background-color: transparent;
+}
+
+.home{
+    cursor: pointer;
+}
+
+.home:hover{
+    background-color: transparent;
+    /* box-shadow: 0 0 10px 5px #fff; */
+    box-shadow:  2px 4px 8px #000; 
+
+
+}
+
+.login1{
+    /* border: #000 solid 1px; */
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0px 20px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    // background-image: linear-gradient(120deg, #f39c12, #e74c3c); 
+}
+
+.login1:hover{
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
+
+.text1{
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Centers the content within the container */
+    align-items: flex-start; /* Aligns items at the top */
+    /* padding: 20px 0;  */
+}
+
+.ecommerce {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%; 
+    /* max-width: 1200px;  */
+    padding: 40px 0;
+    /* background-image: url(../../assets/ecommerce--removebg.png); */
+}
+
+.ecommerce h1 {
+    font-size: 4em; /* Adjust size as needed */
+    color: #000;
+    /* margin-bottom: 25%; */
+    margin-left: 10%;
+}
+
+ .paragraph{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* display: inline-block; */
+    font-size: 20px;
+    margin-left: 10%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.ecommerce img{
+    margin-right: 50px;
+    /* margin-top: -10px; */
+}
+
+#home-screen-image {
+    width: 50%; 
+    height: auto; 
+}
+
+.apnabazar{
+    color: #000;
+    text-decoration: none;
+}
+
+.buy{
+    margin-left: 20%;
+}
+
+.form-control {
+    border-radius: 3px;
+    width: 600px;
+    margin-left: 20px;
+}
+
+/* Container for the user info and logout button */
+.user-info-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjust the gap between the username and logout button as needed */
+    text-overflow: ellipsis;
+    max-width: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+  
+  /* Style for the welcome message */
+  .user-info-container span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+  }
+  
+
+  
+
+  

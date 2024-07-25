@@ -1,0 +1,31 @@
+<div class="delete-product-container">
+  <h2>Delete Product</h2>
+  <form (ngSubmit)="onSearchProduct()">
+    <label for="productId">Product ID:</label>
+    <input type="number" id="productId" [(ngModel)]="productId" name="productId" required />
+    <button type="submit">Fetch Product</button>
+  </form>
+
+  <div *ngIf="errorMessage">
+    <p class="error">{{ errorMessage }}</p>
+  </div>
+
+  <div *ngIf="product.title">
+    <h3>Product Details</h3>
+    <p><strong>ID:</strong> {{ product.id }}</p>
+    <p><strong>Title:</strong> {{ product.title }}</p>
+    <p><strong>Description:</strong> {{ product.description }}</p>
+    <p><strong>Price:</strong> {{ product.price }}</p>
+    <p><strong>Category:</strong> {{ product.category }}</p>
+    <p><strong>Image:</strong> <img style="width: 100px;" [src]="product.image" alt="Product Image" /></p>
+    <button (click)="showDeleteConfirmation()">Delete Product</button>
+  </div>
+
+  <div *ngIf="showConfirmation" class="confirmation-container">
+      <h3>Are you sure you want to delete this product?</h3>
+      <div class="confirmation-buttons">
+        <button (click)="confirmDelete()">Confirm Delete</button>
+        <button (click)="cancelDelete()">Cancel</button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="login container">
+    <form *ngIf="!authService.isLoggedIn(); else loggedInTemplate" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+        <h1>LogIn</h1>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="loginData.username" placeholder="Enter Email/Mobile no:" required #username="ngModel">
+        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error-message">
+            Username is required.
+        </div>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="loginData.password" placeholder="Enter password:" required #password="ngModel">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error-message">
+            Password is required.
+        </div>
+
+        <button [disabled]="!loginForm.valid" type="submit">Login</button>
+
+        <p class="signup-text">
+            New to ShopEase? <a class="signup-link" routerLink="/user-register">Sign up now</a>
+        </p>
+    </form>
+
+    <ng-template #loggedInTemplate>
+        <div>
+          <p>Welcome, {{ authService.getUserInfo().username }}!</p>
+          <button (click)="logout()">Logout</button>
+        </div>
+      </ng-template>
+</div>

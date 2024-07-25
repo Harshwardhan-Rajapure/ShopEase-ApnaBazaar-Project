@@ -1,0 +1,14 @@
+/* *{
+    margin-top: 10px;
+} */
+
+.social-icons fa-icon {
+    font-size: 20px;
+    margin: 5px;
+  }
+  
+  .social-icons a:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.3); 
+    color: #ff9800; 
+  }

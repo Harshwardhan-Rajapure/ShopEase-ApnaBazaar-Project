@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Add New Product</h2>
+  <form (ngSubmit)="onSubmit(productForm)" #productForm="ngForm">
+    <div class="form-group">
+      <label for="title">Product Title</label>
+      <input type="text" class="form-control" id="title" name="title" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" name="description" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" name="price" ngModel required>
+    </div>
+    <div class="form-group">
+      <!-- <label for="category">Category</label>
+      <input type="text" class="form-control" id="category" name="category" ngModel required> -->
+      <label for="category">Category</label>
+      <select class="form-control" id="category" name="category" ngModel required>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="jewelery">Jewelery</option>
+        <option value="beauty">Beauty</option>
+        <option value="home/kitchen">Home & Kitchen</option>
+        <option value="furniture">Furniture</option>
+        <option value="sports">Sports</option>
+        <option value="grocery">Grocery</option>
+        <option value="books">Books</option>
+      </select>
+
+    </div>
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input type="text" class="form-control" id="image" name="image" ngModel required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Product</button>
+  </form>
+</div>

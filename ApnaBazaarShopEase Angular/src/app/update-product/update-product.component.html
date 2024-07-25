@@ -1,0 +1,56 @@
+<div class="container">
+  <h2>Update Product</h2>
+  <form (ngSubmit)="onSearchProduct()" #searchProductForm="ngForm">
+    <div class="form-group">
+      <label for="productId">Product ID</label>
+      <input type="number" class="form-control" id="productId" [(ngModel)]="productId" name="productId"
+        placeholder="Enter Product ID" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Fetch Product</button>
+  </form>
+
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Form for updating product details -->
+  <form *ngIf="product" (ngSubmit)="onSubmit(updateForm)" #updateForm="ngForm">
+    <div class="form-group">
+      <label for="title">Product Title</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="product.title" name="title" required>
+    </div>
+    <div class="form-group">
+      <!-- <div class="form-group">
+        <p><img style="width: 150px;" [src]="product.image" alt="Product Image" /></p>
+      </div> -->
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="product.description" name="description"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price" required>
+    </div>
+    <div class="form-group">
+      <!-- <label for="category">Category</label>
+        <input type="text" class="form-control" id="category" [(ngModel)]="product.category" name="category" required> -->
+      <label for="category">Category</label>
+      <select class="form-control" id="category" [(ngModel)]="product.category" name="category" required>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="jewelery">Jewelery</option>
+        <option value="beauty">Beauty</option>
+        <option value="home/kitchen">Home & Kitchen</option>
+        <option value="furniture">Furniture</option>
+        <option value="sports">Sports</option>
+        <option value="grocery">Grocery</option>
+        <option value="books">Books</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input type="text" class="form-control" id="image" [(ngModel)]="product.image" name="image" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Product</button>
+  </form>
+</div>
