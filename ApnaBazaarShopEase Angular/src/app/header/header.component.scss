@@ -21,7 +21,7 @@
     position: relative;
     display: inline-block;
     background-color: transparent;
-    margin-right: 20%;
+    // margin-left: 17%;
 }
 
 .search-input {
@@ -58,8 +58,16 @@
 }
 
 .commerce{
-    // margin-left: 10px;
+    margin-left: 8%;
     background-color: transparent;
+}
+
+.right-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 10px;
 }
 
 .search-input {
@@ -81,7 +89,7 @@
 
 .navbar{
     display:flex;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
     background: #fff;
     /* margin-right: 15%; */
@@ -116,16 +124,10 @@
     background-color: transparent;
 }
 
-.home{
-    cursor: pointer;
-}
-
 .home:hover{
     background-color: transparent;
     /* box-shadow: 0 0 10px 5px #fff; */
     box-shadow:  2px 4px 8px #000; 
-
-
 }
 
 .login1{
@@ -213,22 +215,20 @@ h1{
     margin-left: 20px;
 }
 
-/* Container for the user info and logout button */
 .user-info-container {
     display: flex;
     align-items: center;
-    gap: 5px; /* Adjust the gap between the username and logout button as needed */
+    gap: 2px; /* Adjust the gap between the username and logout button as needed */
     text-overflow: ellipsis;
-    max-width: 20%;
+    // max-width: 26%;
     white-space: nowrap;
-    overflow: hidden;
+    // overflow: hidden;
 }
   
-  /* Style for the welcome message */
   .user-info-container span {
     font-size: 16px;
     font-weight: bold;
-    color: #333; /* Adjust the color as needed */
+    color: #333; 
   }
   
 
