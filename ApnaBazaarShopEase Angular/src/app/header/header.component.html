@@ -9,8 +9,8 @@
         <fa-icon [icon]="searchicon" class="icons search-icon"></fa-icon>
         <input class="search-input" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search for Products, Brands and more...">
     </div>
-   
-        <a routerLink="" class="nav-link" >Home</a>
+   <div class="right-nav">
+        <a routerLink="" class="nav-link home" >Home</a>
 
         <a routerLink="admin-login" *ngIf="!authService.isLoggedIn()" class="nav-link">Admin-Login</a>
 
@@ -28,6 +28,6 @@
                 <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
                 <div style="font-size: 10px" class="badge bg-danger" >{{totalItem}}</div>
             </button>
-
+        </div>
 </div>
 </header>
